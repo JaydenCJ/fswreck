@@ -1,0 +1,18 @@
+[package]
+name = "fswreck"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Deterministically generates adversarial file trees — unicode names, symlink cycles, deep nesting, odd permissions — as reusable, verifiable test fixtures."
+license = "MIT"
+repository = "https://github.com/JaydenCJ/fswreck"
+keywords = ["testing", "fixtures", "filesystem", "fuzzing", "cli"]
+categories = ["command-line-utilities", "development-tools::testing"]
+
+[dependencies]
+# None. fswreck is std-only by design: a fixture generator that pulls in a
+# dependency tree would defeat its own purpose.
+
+[profile.release]
+strip = true
+lto = true
